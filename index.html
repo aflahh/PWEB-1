@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" />
+    <title>CV Website</title>
+    <style>
+      body {
+        font-family: "Montserrat";
+      }
+
+      #profile img {
+        border-radius: 50%;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .wrapper {
+        width: 100%;
+        height: 100vh;
+        overflow-y: scroll;
+        scroll-snap-type: y mandatory;
+      }
+
+      .child {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        scroll-snap-align: start;
+      }
+
+      #home {
+        background-image: url(https://media.giphy.com/media/crwwGNqIMccLXpD10F/source.gif);
+        background-size: cover;
+      }
+
+      #profile,
+      #skills,
+      #contact {
+        background-image: url(https://source.unsplash.com/OZ2BNYfF_xM/1600x900);
+        background-size: cover;
+      }
+
+      #navbar {
+        height: 10vh;
+        position: fixed;
+        top: -100px;
+        width: 100%;
+        transition: top 0.3s;
+      }
+
+      #navbar h1 {
+        font-family: "Cookie";
+        font-size: 2em;
+      }
+
+      #skills img {
+        padding: 10px;
+        padding-left: 20px;
+      }
+
+      #home h1 {
+        font-size: 4em;
+      }
+
+      #scrolltext {
+        position: static;
+        bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div onscroll="navbarFunction()" class="wrapper" id="wrap">
+      <nav class="navbar sticky-top navbar-light bg-light px-5" id="navbar">
+        <div class="container-fluid">
+          <h1 class="navbar-brand">My Website</h1>
+          <div class="navbar-nav fs-4 d-flex flex-row">
+            <a class="ps-4 nav-link" href="#home">Home</a>
+            <a class="ps-4 nav-link" href="#profile">Profile</a>
+            <a class="ps-4 nav-link" href="#skills">Skills</a>
+            <a class="ps-4 nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
+      <div class="child bg-dark text-light" id="home">
+        <h1>Hello There!!!</h1>
+        <h2 class="text-muted">Welcome to my website</h2>
+      </div>
+      <div class="child d-inline-flex bg-light" id="profile">
+        <div class="w-100 p-5 text-center">
+          <img src="poto1.jpg" alt="foto aflah" height="200px" />
+          <br>
+          <br>
+          <h1 class="fw-bold">I'm Aflah Hilmy</h1>
+          <h5>Third-year Informatics Student</h5>
+          <br>
+          <br>
+          <a>"I’m an Enthusiast Learner, Passionate, and Responsible person. Like to learn new things and challenges, willing to give my best efforts for every opportunity."</a>
+        </div>
+        <div class="w-100 p-5 text-start">
+          <h1 class="fw-bold">Education</h1>
+          <h4>2019 - Present</h4>
+          <p>Informatics - Institut Teknologi Sepuluh Nopember</p>
+          <h4>2016 - 2019</h4>
+          <p>SMAN 5 Surabaya</p>
+          <h4>2013 - 2016</h4>
+          <p>SMPN 1 Surabaya</p>
+        </div>
+      </div>
+      <div class="child bg-light" id="skills">
+        <h1 class="fw-bold p-3">Skills</h1>
+        <div class="d-inline-flex">
+          <div class="p-2">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-html-file-file-type-justicon-lineal-justicon.png" />HTML
+          </div>
+          <div class="p-2">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-css-file-file-type-justicon-lineal-justicon.png" />CSS
+          </div>
+          <div class="p-2">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/64/000000/external-js-file-file-type-justicon-lineal-justicon.png" />JS
+          </div>
+          <div class="p-2">
+            <img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png" width="100px" />Adobe Illustrator
+          </div>
+          <div class="p-2">
+            <img src="https://img.icons8.com/color/48/000000/adobe-photoshop--v1.png" width="100px" />Adobe Photoshop
+          </div>
+          <div class="p-2">
+            <img src="https://img.icons8.com/color/48/000000/adobe-premiere-pro--v1.png" width="100px" />Adobe Premiere
+          </div>
+        </div>
+      </div>
+      <div class="child d-inline-flex bg-light" id="contact">
+        <div class="w-100 p-5 text-center d-inline-flex">
+          <a href="mailto:aflahhilmy@gmail.com" class="p-5">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/50/000000/external-gmail-social-media-justicon-lineal-justicon.png" />
+          </a>
+          <a href="https://wa.me/6281553679737" class="p-5">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/50/000000/external-whatsapp-social-media-justicon-lineal-justicon.png" />
+          </a>
+          <a href="https://www.linkedin.com/in/aflah-hilmy" class="p-5">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/50/000000/external-linkedin-social-media-justicon-lineal-justicon.png" />
+          </a>
+          <a href="https://www.instagram.com/aflahhilmy" class="p-5">
+            <img src="https://img.icons8.com/external-justicon-lineal-justicon/50/000000/external-instagram-social-media-justicon-lineal-justicon.png" />
+          </a>
+        </div>
+        <div class="w-100 p-5 text-start">
+          <h1 class="fw-bold pb-5">Send Me a Message</h1>
+          <form id="msgsend">
+            <div class="mb-3">
+              <label for="FormControlInput1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="FormControlInput1" placeholder="name@mail.com">
+            </div>
+            <div class="mb-3">
+              <label for="FormControlTextarea1" class="form-label">Your Message</label>
+              <textarea class="form-control" id="FormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="mb-3">
+              <button type="submit" class="btn btn-dark mb-3">Send</button>
+            </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+      <script>
+        function navbarFunction() {
+          const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+          var scroll = document.getElementById("wrap");
+          var y = scroll.scrollTop;
+          if (y > 0) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-100px";
+          }
+        }
+      </script>
+  </body>
+</html>
